@@ -1,0 +1,38 @@
+2026-09-02T04:00:00.0000000Z ##[group]Run actions/checkout@v4
+2026-09-02T04:00:00.1234567Z Syncing repository: evan-thedev/actions-fail-digest
+2026-09-02T04:00:00.2345678Z ##[endgroup]
+2026-09-02T04:00:01.0000000Z ##[group]Run actions/setup-python@v5
+2026-09-02T04:00:01.1234567Z Setting up Python 3.11
+2026-09-02T04:00:01.2345678Z Successfully set up Python 3.11.5
+2026-09-02T04:00:01.3456789Z ##[endgroup]
+2026-09-02T04:00:02.0000000Z ##[group]Install dependencies
+2026-09-02T04:00:02.1234567Z Running: pip install -r requirements.txt
+2026-09-02T04:00:02.2345678Z Collecting pytest>=7.0.0
+2026-09-02T04:00:02.3456789Z   Downloading pytest-7.4.0-py3-none-any.whl (325 kB)
+2026-09-02T04:00:03.0000000Z Successfully installed pytest-7.4.0
+2026-09-02T04:00:03.1234567Z ##[endgroup]
+2026-09-02T04:00:04.0000000Z ##[group]Run tests
+2026-09-02T04:00:04.1234567Z Running: pytest tests/
+2026-09-02T04:00:04.2345678Z ============================= test session starts ==============================
+2026-09-02T04:00:04.3456789Z platform linux -- Python 3.11.5, pytest-7.4.0, pluggy-1.2.0
+2026-09-02T04:00:04.4567890Z collected 5 items
+2026-09-02T04:00:05.0000000Z 
+2026-09-02T04:00:05.1234567Z tests/test_parser.py::test_basic_parse PASSED                           [ 20%]
+2026-09-02T04:00:05.2345678Z tests/test_parser.py::test_error_detection FAILED                       [ 40%]
+2026-09-02T04:00:05.3456789Z 
+2026-09-02T04:00:05.4567890Z =================================== FAILURES ===================================
+2026-09-02T04:00:05.5678901Z ________________________________ test_error_detection ___________________________
+2026-09-02T04:00:06.0000000Z 
+2026-09-02T04:00:06.1234567Z     def test_error_detection():
+2026-09-02T04:00:06.2345678Z         result = parse_log("test data")
+2026-09-02T04:00:06.3456789Z >       assert result.has_failure == True
+2026-09-02T04:00:06.4567890Z E       AssertionError: assert False == True
+2026-09-02T04:00:06.5678901Z E        +  where False = LogDigest(has_failure=False).has_failure
+2026-09-02T04:00:07.0000000Z 
+2026-09-02T04:00:07.1234567Z tests/test_parser.py:42: AssertionError
+2026-09-02T04:00:07.2345678Z ::error::Test failed: test_error_detection
+2026-09-02T04:00:07.3456789Z =========================== short test summary info ============================
+2026-09-02T04:00:07.4567890Z FAILED tests/test_parser.py::test_error_detection - AssertionError: assert False == True
+2026-09-02T04:00:08.0000000Z ========================= 1 failed, 4 passed in 2.45s ==========================
+2026-09-02T04:00:08.1234567Z ##[endgroup]
+2026-09-02T04:00:08.2345678Z ##[error]Process completed with exit code 1.
