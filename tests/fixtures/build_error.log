@@ -1,0 +1,17 @@
+2026-09-02T03:30:00.0000000Z ##[group]Build application
+2026-09-02T03:30:00.1234567Z Running: npm run build
+2026-09-02T03:30:01.0000000Z 
+2026-09-02T03:30:01.1234567Z > build
+2026-09-02T03:30:01.2345678Z > webpack --mode production
+2026-09-02T03:30:02.0000000Z 
+2026-09-02T03:30:03.0000000Z assets by path *.js 125 KiB
+2026-09-02T03:30:03.1234567Z   asset main.js 120 KiB [emitted] (name: main)
+2026-09-02T03:30:04.0000000Z 
+2026-09-02T03:30:05.0000000Z ERROR in ./src/components/Button.tsx
+2026-09-02T03:30:05.1234567Z Module not found: Error: Can't resolve './styles.css' in '/home/runner/work/project/src/components'
+2026-09-02T03:30:05.2345678Z  @ ./src/components/Button.tsx 3:0-22
+2026-09-02T03:30:05.3456789Z  @ ./src/App.tsx 5:0-38
+2026-09-02T03:30:06.0000000Z 
+2026-09-02T03:30:06.1234567Z ::error::Build failed with 1 error
+2026-09-02T03:30:06.2345678Z ##[endgroup]
+2026-09-02T03:30:06.3456789Z ##[error]Process completed with exit code 1.
