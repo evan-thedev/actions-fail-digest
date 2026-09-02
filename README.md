@@ -21,7 +21,7 @@ It's aimed at UAT/CI debugging, not log warehousing. Works offline — no GitHub
 - Not a clone of [gha-fail-digest](https://github.com/johnsmith507/gha-fail-digest) (original implementation)
 - Not a log warehouse or analytics platform
 - Not for electronics/UAT diagnostic logs (see [fault-log](https://github.com/evan-thedev/fault-log) for that)
-- Not for CSV test results (see [uat-csv-summarizer](https://github.com/evan-thedev/uat-csv-summarizer))
+- Not for CSV test results (see [uat-summarizer](https://github.com/evan-thedev/uat-summarizer))
 
 ## Requirements
 
@@ -205,4 +205,4 @@ Issues and PRs welcome. Please ensure tests pass before submitting.
 ## Related Projects
 
 - [fault-log](https://github.com/evan-thedev/fault-log) — Electronics/UAT diagnostic log parser
-- [uat-csv-summarizer](https://github.com/evan-thedev/uat-csv-summarizer) — CSV test result summarizer
+- [uat-summarizer](https://github.com/evan-thedev/uat-summarizer) — CSV test result summarizer
